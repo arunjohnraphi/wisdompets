@@ -12,5 +12,8 @@ class Pet(models.model):
     submission_date = models.DateTimeField()
     age = models.IntegerField(null=True)
 
+    vaccinations = models.ManyToManyField('Vaccine',blank = True)
 
+class Vaccine(models.model):
+    name = models.CharField(max_length=50)
 
